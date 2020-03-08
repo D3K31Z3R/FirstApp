@@ -1,0 +1,28 @@
+<!--suppress TypeScriptUnresolvedVariable -->
+<div class="app">
+<h1>Raad het getal</h1>
+<mat-card>
+    <mat-card-subtitle>Raad het getal tussen 1 en 100.</mat-card-subtitle>
+    <mat-form-field>
+      <label matPrefix class="yourNumber">Jouw getal: </label>
+      <label>
+        <input [disabled]="attempts === 0" class="nrInput" matInput type="number" max="100" min="1" [value]="guess" (input)="guess = $event.target.value">
+      </label>
+    </mat-form-field>
+  <mat-card-actions>
+    <button [disabled]="attempts === 0 || difference === 0 || guess > 100" mat-flat-button (click)="Guess()">Raden</button>
+    <button mat-flat-button (click)="Game()">Herstarten</button>
+  </mat-card-actions>
+    <p *ngIf="difference < 0" class="warning">Het getal dat we zoeken is lager.</p>
+    <p *ngIf="difference > 0" class="warning">Het getal dat we zoeken is hoger.</p>
+    <p *ngIf="difference === 0" class="success">Juist! Dit is het getal dat we zoeken!</p>
+    <p *ngIf="attempts === 0" class="warning">Game Over!</p>
+  <p>Aantal beurten over:
+    <span>{{attempts}}</span>
+  </p>
+  <p>Tijd over:
+    <span>{{timeLeft}}</span><span *ngIf="attempts <10">{{startTimer()}}</span>
+  </p>
+  <p *ngIf="guess > 100" class="warning">Het hoogst mogelijke getal is 100!!!</p>
+</mat-card>
+</div>

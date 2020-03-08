@@ -1,0 +1,43 @@
+.app {
+  margin-top: 200px;
+}
+mat-card {
+  margin: auto;
+  width: 50%;
+  border: 3px solid darkgreen;
+  padding: 70px 0;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+.mat-flat-button {
+  background-color: darkgreen;
+  color: ghostwhite;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+mat-card-subtitle {
+  padding-top: -20px;
+}
+p.warning {
+  color: maroon;
+}
+p.success {
+  color: darkgreen;
+}
+.yourNumber {
+  text-align: center;
+  padding-left: 100px;
+  margin-right: 10px;
+}
+input {
+  text-align: center;
+  width: 70px;
+  border: darkgreen dashed 0.5px;
+
+}
+mat-card-actions {
+  margin-top: 10px;
+}
+
