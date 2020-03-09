@@ -10,8 +10,10 @@ export class CounterService {
   seconds = this.secondsSubject.asObservable();
   constructor() {
     setInterval(() => {
-      this.counter -= 1;
-      this.secondsSubject.next(this.counter);
+      while(this.counter > 0){
+        this.counter -= 1;
+        this.secondsSubject.next(this.counter);
+      }
     }, 1000)
    }
 }
