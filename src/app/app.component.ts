@@ -19,8 +19,8 @@ export class AppComponent {
   timeLeft: number;
   seconds: number = 60; 
   constructor(counterservice: CounterService) {
-    counterservice.seconds.subscribe((secondss) => {
-      this.seconds = secondss;
+      counterservice.seconds.subscribe((secondss) => {
+        this.seconds = secondss;
     });
     this.Game();
   }
