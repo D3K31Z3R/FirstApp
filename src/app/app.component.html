@@ -21,7 +21,7 @@
     <span>{{attempts}}</span>
   </p>
   <p>Tijd over:
-    <span>{{timeLeft}}</span><span *ngIf="attempts <10">{{startTimer()}}</span>
+    <span>{{seconds}}</span>
   </p>
   <p *ngIf="guess > 100" class="warning">Het hoogst mogelijke getal is 100!!!</p>
 </mat-card>

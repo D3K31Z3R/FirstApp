@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CounterService } from './counter.service'
 
 
 function getNumber(min, max) {
@@ -16,8 +17,11 @@ export class AppComponent {
   attempts: number;
   number: number;
   timeLeft: number;
-  interval;
-  constructor() {
+  seconds: number = 60; 
+  constructor(counterservice: CounterService) {
+    counterservice.seconds.subscribe((secondss) => {
+      this.seconds = secondss;
+    });
     this.Game();
   }
 
@@ -30,13 +34,6 @@ export class AppComponent {
   Guess() {
     this.difference = this.number - this.guess;
     this.attempts--;
-  }
-  startTimer() {
-    this.interval = setInterval(() => {
-      if (this.timeLeft > 0) {
-        this.timeLeft = this.timeLeft - 1;
-      }
-    }, 1000);
   }
 }
 
