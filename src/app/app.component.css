@@ -1,43 +1,48 @@
-.app {
-  margin-top: 200px;
+div.wrap {
+  align-self: center;
+  padding: 10%;
 }
-mat-card {
-  margin: auto;
-  width: 50%;
-  border: 3px solid darkgreen;
-  padding: 70px 0;
-  text-align: center;
+div.row {
+  align-content: center;
+  padding: 0 12px 0 12px;
+  margin: 6px 10px 6px 10px;
 }
 h1 {
+  text-emphasis: bold black ;
   text-align: center;
+  align-self: top center;
 }
 .mat-flat-button {
   background-color: darkgreen;
   color: ghostwhite;
-  margin-left: 5px;
-  margin-right: 5px;
+  padding: 0 6px 0 6px;
+  margin: 6px 8px 6px 8px;
+  min-width: 88px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+mat-card-actions {
+  padding: 0 6px 0 6px;
+  margin: 6px 8px 6px 8px;
 }
 mat-card-subtitle {
-  padding-top: -20px;
+  text-align: center;
 }
 p.warning {
+  text-align: center;
   color: maroon;
 }
 p.success {
-  color: darkgreen;
-}
-.yourNumber {
   text-align: center;
-  padding-left: 100px;
-  margin-right: 10px;
+  color: darkgreen;
 }
 input {
   text-align: center;
-  width: 70px;
+  width: 100%;
   border: darkgreen dashed 0.5px;
-
 }
-mat-card-actions {
-  margin-top: 10px;
+p.bottom {
+  text-align: center;
 }
-

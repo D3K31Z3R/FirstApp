@@ -10,6 +10,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import { CounterService } from './counter.service';
+import {FlexLayoutModule} from '@angular/flex-layout';
+
 
 
 @NgModule({
@@ -17,6 +19,7 @@ import { CounterService } from './counter.service';
     AppComponent,
   ],
   imports: [
+    FlexLayoutModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
