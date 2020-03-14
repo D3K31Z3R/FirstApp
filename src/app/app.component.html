@@ -11,7 +11,7 @@
     </mat-form-field>
   <mat-card-actions>
     <button [disabled]="attempts === 0 || difference === 0 || guess > 100" mat-flat-button (click)="Guess()">Raden</button>
-    <button mat-flat-button (click)="Game()">Herstarten</button>
+    <button mat-flat-button (click)="Restart()">Herstarten</button>
   </mat-card-actions>
     <p *ngIf="difference < 0" class="warning">Het getal dat we zoeken is lager.</p>
     <p *ngIf="difference > 0" class="warning">Het getal dat we zoeken is hoger.</p>
