@@ -16,7 +16,7 @@
     <p *ngIf="difference < 0" class="warning">Het getal dat we zoeken is lager.</p>
     <p *ngIf="difference > 0" class="warning">Het getal dat we zoeken is hoger.</p>
     <p *ngIf="difference === 0" class="success">Juist! Dit is het getal dat we zoeken!</p>
-    <p *ngIf="attempts === 0" class="warning">Game Over!</p>
+    <p *ngIf="attempts === 0 || seconds == 0" class="warning">Game Over!</p>
   <p>Aantal beurten over:
     <span>{{attempts}}</span>
   </p>

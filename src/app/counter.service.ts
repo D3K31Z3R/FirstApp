@@ -9,11 +9,12 @@ export class CounterService {
   secondsSubject: Subject<number> = new Subject<number>();
   seconds = this.secondsSubject.asObservable();
   constructor() {
-    setInterval(() => {
-      while(this.counter > 0){
-        this.counter -= 1;
-        this.secondsSubject.next(this.counter);
-      }
+    let interval = setInterval(() => {
+        this.counter -= 1
+          this.secondsSubject.next(this.counter);
+          if(this.counter === 0) {
+            clearInterval(interval)
+          }
     }, 1000)
    }
 }
